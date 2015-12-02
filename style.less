@@ -1,0 +1,163 @@
+@import url(mixins.less);
+
+@font-face {
+    font-family: 'Brandon';
+    src: url('fonts/Brandon-Bold.eot'); 
+    src: url('fonts/Brandon-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Brandon-Bold.woff') format('woff'),
+         url('fonts/Brandon-Bold.ttf') format('truetype'),
+         url('fonts/Brandon-Bold.otf') format('opentype'),
+         url('fonts/Brandon-Bold.svg#Brandon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Brandon';
+    src: url('fonts/Brandon-Black.eot'); 
+    src: url('fonts/Brandon-Black.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Brandon-Black.woff') format('woff'),
+         url('fonts/Brandon-Black.ttf') format('truetype'),
+         url('fonts/Brandon-Black.otf') format('opentype'),
+         url('fonts/Brandon-Black.svg#Brandon') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@small-margin: 10px;
+@primary-margin: 15px;
+@big-margin: 20px;
+
+@gray: #3f434c;
+@gold: #ebbf3a;
+@red: #f93900;
+
+
+::-moz-selection { /* Code for Firefox */
+	color: white;
+    background: @red;
+    opacity: .6;
+}
+
+::selection {
+	color: white;
+    background: @red;
+    opacity: .6;
+}
+
+
+html{
+
+	margin:0;
+	padding:0;
+	height: 100%;
+
+}
+
+body{
+
+	margin:0;
+	padding:0;
+	background: @gray;
+	color: white;
+	height: 100%;
+	position: relative;
+	font-size: 1.1em;
+	font-family: 'Brandon', sans-serif;
+	text-align: center;
+	line-height: 120%;
+	.box-sizing();
+
+
+}
+
+h1{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.9em;
+	padding: 0;
+	margin: @small-margin 0;
+	color: @gray;
+	text-transform: uppercase;
+}
+
+a{
+
+	text-decoration: none;
+	
+	&.button{
+		
+		background-color: white;
+		border: 2px solid @red;
+		line-height: 100%;
+		color: @red;
+		font-size: 1.1em;
+		display: inline-block;
+		text-align: center;
+		padding: 5px 4px;
+		text-transform: uppercase;
+		.box-sizing();
+
+		
+		&:hover{
+			
+			background-color: @red;
+			color: white;
+			
+		}
+		
+	}
+	
+}
+
+.container{
+	background: url('images/thx.jpg') 100% 100%;
+	max-width: 615px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.white{
+
+	background: rgba(255,255,255,0.9);
+	padding: @big-margin @primary-margin;
+	display: inline-block;
+	color: @gray;
+	text-transform: uppercase;
+	height: 100%;
+	.box-sizing();
+
+}
+
+.content{
+	border-top: 1px @gold solid;
+	border-bottom: 1px @gold solid;
+	padding: @primary-margin 0 13px 0;
+	margin-bottom: @small-margin;
+
+}
+
+large{
+
+	font-size: 1.4em;
+	line-height: 120%;
+
+}
+
+@media all and (min-width:481px) {	
+
+	.white{
+
+		float: left;
+
+	}
+
+}
+
+
